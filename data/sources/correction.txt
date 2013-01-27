@@ -1,0 +1,41 @@
+http://www.ccdmd.qc.ca/fr/strategies_revision/?id=5185&action=animer
+#O. = Orth. = faute d'orthographe (pas dans le gaffiot)
+#G. = Gram. = faute de grammaire (mal conjugué, mal décliné, mauvais accord)
+#S. = Synt. = faute de syntaxe (mauvais ordre des mots, mauvaise préposition)
+#V. = Voca. = faute de vocabulaire (mauvais mot, sens erroné)
+#A. = vAri. = variante orthographique
+#P. = Ponc. = faute de ponctuation
+#R. = oRig. = texte original
+
+adsc. = asc.
+beniv. = benev.
+compren. = comprehen.
+conp. = comp.
+conr. = corr.
+consumpto = consumto
+contempno = contemno
+deler. = delir.
+deprehen. = depren.
+exibeo = exhibeo
+expecto = exspecto
+incolom. = incolum.
+inl. = ill.
+inm. = imm.
+inp. = imp.
+inr. = irr.
+joc. = juc.
+moereo = maereo
+muttio = mutio
+necleg. = negleg.
+obc. = occ.
+oport. = opport.
+ortus = hortus
+periclum = periculum
+repper. = reper.
+rettud. = retud.
+rettul. = retul.
+scena = scaena
+subc. = succ.
+suspicio = suspitio
+tempto = tento
+vulpis, is = vulpes, is

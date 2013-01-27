@@ -1,0 +1,129 @@
+<!--
+    Fables de Phèdre
+
+    Options widget
+
+    @author    Michel Corne
+    @copyright 2011 Michel Corne
+    @license   http://www.opensource.org/licenses/gpl-3.0.html GNU GPL v3
+-->
+
+<table>
+
+  <tr> 
+    <td>Numéros de vers</td>
+    <td> 
+      <select id="fp-hide-numbers" onchange="hideNumbers()"> 
+        <option value="" />Afficher
+        <option value="yes" />Cacher 
+      </select> 
+    </td> 
+    <td> 
+      <a href="javascript:displayORhideElt('fp-numbers')">?</a>
+    </td>
+  </tr>
+  
+  <tr> 
+    <td colspan="3">
+      <span id="fp-numbers" style="display:none" class="fp-help">
+        Cette option affiche ou cache les numéros de vers.
+      </span>
+    </td>
+  </tr>
+    
+  <tr> 
+    <td>Vers d'un paragraphe</td>
+    <td> 
+      <select id="fp-display-verses" onchange="displayVerses()"> 
+        <option value="" />À la suite
+        <option value="yes" />À la ligne
+      </select> 
+    </td> 
+    <td> 
+      <a href="javascript:displayORhideElt('fp-verses')">?</a>
+    </td>
+  </tr>
+  
+  <tr> 
+    <td colspan="3">
+      <span id="fp-verses" style="display:none" class="fp-help">
+        Cette option affiche les vers d'un paragraphe à la suite ou à la ligne.
+      </span>
+    </td>
+  </tr>
+
+  <tr> 
+    <td>Texte latin</td>
+    <td> 
+      <select id="fp-display-latin-text" onchange="displayLatinText()"> 
+        <option value="" />Avec corrections
+        <option value="yes" />Original
+      </select> 
+    </td> 
+    <td> 
+      <a href="javascript:displayORhideElt('fp-latin-texts')">?</a>
+    </td>
+  </tr>
+  
+  <tr> 
+    <td colspan="3">
+      <span id="fp-latin-texts" style="display:none" class="fp-help">
+        Cette option affiche le texte latin corrigé ou original, voir l'option "Corrections" ci-dessous.
+      </span>
+    </td>
+  </tr>
+    
+  <tr> 
+    <td>Corrections</td>
+    <td> 
+      <select id="fp-display-differences" onchange="displayDifferences()"> 
+        <option value="" />Cacher
+        <option value="yes" />Souligner
+      </select> 
+    </td> 
+    <td> 
+      <a href="javascript:displayORhideElt('fp-differences')">?</a>
+    </td>
+  </tr>
+  
+  <tr> 
+    <td colspan="3">
+      <span id="fp-differences" style="display:none" class="fp-help">
+        Cette option souligne en pointillé (ou ne souligne pas) les corrections apportées au texte latin.
+        Le passage de la souris au-dessus d'un mot souligné fait apparaître le mot original
+        ou corrigé, selon l'option "Texte latin" ci-dessus.
+        <br />Abréviations des corrections:
+        <br />-&nbsp;f. d'orth.&nbsp;: faute d'orthographe (absent du dictionnaire)
+        <br />-&nbsp;f. de gram.&nbsp;: faute de grammaire (mal conjugué, mal décliné, mauvais accord)
+        <br />-&nbsp;f. de voca.&nbsp;: faute de vocabulaire (mauvais mot, sens erroné)
+        <br />-&nbsp;f. de ponc.&nbsp;: faute de ponctuation
+        <br />-&nbsp;err. de synt.&nbsp;: erreur de syntaxe (mauvais ordre des mots, mauvaise préposition)
+        <br />-&nbsp;var. orth.&nbsp;: variante orthographique.
+      </span>
+    </td>
+  </tr>
+
+  <tr> 
+    <td>Liens sur le manuscrit</td>
+    <td> 
+      <select id="fp-hide-link-to-manuscript" onchange="hideLinksToManuscript()"> 
+        <option value="" />Afficher
+        <option value="yes" />Cacher
+      </select> 
+    </td> 
+    <td> 
+      <a href="javascript:displayORhideElt('fp-link-to-manuscript')">?</a>
+    </td>
+  </tr>
+  
+  <tr> 
+    <td colspan="3">
+      <span id="fp-link-to-manuscript" style="display:none" class="fp-help">
+        Cette option affiche ou cache les liens sur l'édition paléographique du codex Pithoeanus 
+        (manuscrit Rosanbo) publiée par Ulysse Robert en 1893.
+        Exemples&nbsp;: [p.1] = page 1 de l'édition paléographique.
+      </span>
+    </td>
+  </tr>
+
+</table>

@@ -1,0 +1,115 @@
+<!--
+    Fables de Phèdre
+
+    Main functions widget
+
+    @author    Michel Corne
+    @copyright 2011 Michel Corne
+    @license   http://www.opensource.org/licenses/gpl-3.0.html GNU GPL v3
+-->
+
+<script type="text/javascript">
+
+var
+sbStyle = 'page-skin-1';
+
+function displayFrenchTitles()
+{
+    setcookie('fp-display-french-titles', 'yes');
+    hideElt('fp-display-french'); 
+    displayElt('fp-hide-french'); 
+    displayElt('fp-french-table');
+}
+
+function displayLatinText(init)
+{
+    var selected;
+
+    selected = processSelect('fp-display-latin-text', init);
+    updateCssAttr(sbStyle, 'span.fp-correction', 'display', selected? 'none' : 'inline');
+    updateCssAttr(sbStyle, 'span.fp-original', 'display', selected? 'inline' : 'none');
+}
+
+function displayLatinTitles()
+{
+    setcookie('fp-display-latin-titles', 'yes');
+    hideElt('fp-display-latin'); 
+    displayElt('fp-hide-latin'); 
+    displayElt('fp-latin-table');
+}
+
+function displayVerses(init)
+{
+    var selected;
+
+    selected = processSelect('fp-display-verses', init);
+    updateCssAttr(sbStyle, 'span.fp-line', 'display', selected? 'block' : 'inline');
+}
+
+function displayDifferences(init)
+{
+    var selected;
+
+    selected = processSelect('fp-display-differences', init);
+    updateCssAttr(sbStyle, 'span.fp-difference', 'border-bottom-style', selected? 'dotted' : 'none');
+    updateCssAttr(sbStyle, 'span.fp-no-difference', 'display', selected? 'inline' : 'none');
+}
+
+function hideFrenchTitles(){
+    setcookie('fp-display-french-titles', '');
+    hideElt('fp-hide-french'); 
+    displayElt('fp-display-french'); 
+    hideElt('fp-french-table');
+}
+
+function hideLatinTitles(){
+    setcookie('fp-display-latin-titles', '');
+    hideElt('fp-hide-latin'); 
+    displayElt('fp-display-latin'); 
+    hideElt('fp-latin-table');
+}
+
+function hideLinksToManuscript(init)
+{
+    var selected;
+
+    selected = processSelect('fp-hide-link-to-manuscript', init);
+    updateCssAttr(sbStyle, 'span.fp-manuscript, span.fp-manuscript a', 'display', selected? 'none' : 'inline'); // for FF, Chrome
+    updateCssAttr(sbStyle, 'span.fp-manuscript', 'display', selected? 'none' : 'inline'); // for IE
+}
+
+function hideNumbers(init)
+{
+    var selected;
+
+    selected = processSelect('fp-hide-numbers', init);
+    updateCssAttr(sbStyle, 'span.fp-number', 'display', selected? 'none' : 'inline');
+}
+
+function setFrenchTitles(){
+    if (getcookie('fp-display-french-titles')) {
+        displayFrenchTitles();
+    } else {
+        hideFrenchTitles();
+    }
+}
+
+function setLatinTitles(){
+    if (getcookie('fp-display-latin-titles')) {
+        displayLatinTitles();
+    } else {
+        hideLatinTitles();
+    }
+}
+
+displayLatinText(true);
+hideNumbers(true);
+displayVerses(true);
+hideLinksToManuscript(true);
+displayDifferences(true);
+setFrenchTitles();
+setLatinTitles();
+
+setSelectValue('fp-chapter-number', location.pathname);
+
+</script>
