@@ -160,21 +160,21 @@
 -7 criant d'une plainte vaine, et le tue.
 -8 Le lièvre mourant dit en consolation de sa propre mort :
 -9 « Toi qui insouciant il y a un instant, te riais de mes maux,
--10 tu déplores maintenant ton sort d'une plainte similaire. »
+-10 tu déplores maintenant ton sort d'une pareille plainte. »
 
-+10. Le loup et le renard jugés par le singe
++10. Le loup et le renard jugés par le singe | 1/2/2013
 
-*1 Quiconque s'est fait connaître par de honteux mensonges
--2 perd toute créance lors même qu'il dit la vérité.
--3 Ésope le prouve dans cette petite fable.
+*1 Quiconque s'est fait prendre une fois avec un vilain mensonge,
+-2 perd la confiance d'autrui même quand il dit la vérité.
+-3 Cette courte fable d'Ésope le confirme.
 
-*4 Un loup accusait un Renard de l'avoir volé;
--5 le Renard soutenait qu'il était étranger à une aussi méchante action ;
--6 le Singe alors fut appelé pour juger leur querelle.
--7 Lorsque chacun eut plaidé sa cause,
--8 on rapporte que le Singe prononça cette sentence :
--9 « Toi, tu ne me parais pas avoir perdu ce que tu réclames;
--10 toi, je te crois coupable du vol que tu nies si bien. »
+*4 Un loup accusait un Renard de vol.
+-5 Celui-ci niait toute culpabilité de près ou de loin.
+-6 Un singe siègea alors entre-eux en tant que juge.
+-7 Lorsque chacun eut complètement plaidé sa cause,
+-8 on dit que le singe porta le jugement suivant :
+-9 « Toi, tu ne sembles pas avoir perdu ce que tu réclames,
+-10 quant à toi, je crois que tu as dérobé ce que tu nies à merveille. »
 
 +11. Le lion et l'âne à la chasse
 
