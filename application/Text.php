@@ -29,6 +29,13 @@ class Text
     public $images;
 
     /**
+     * Links to La Fontaine fables at wikisource.org
+     *
+     * @var array
+     */
+    public $laFontaine;
+
+    /**
      * The previous chapter number
      *
      * @var int
@@ -168,7 +175,8 @@ class Text
      */
     public function __construct()
     {
-        $this->images = require __DIR__ . '/../data/images.php';
+        $this->images     = require __DIR__ . '/../data/images.php';
+        $this->laFontaine = require __DIR__ . '/../data/la-fontaine.php';
     }
 
     /**
@@ -274,7 +282,11 @@ class Text
 <td class="fp-left"><div class="fp-chapter"><a href="%s">Fable précédente</a></div></td>
 <td class="fp-right"><div class="fp-chapter"><a href="%s">Fable suivante</a></div></td>
 </tr>
-</table>';
+</table>
+<div class="fp-footer">
+<div class="fp-translator">%s</div>
+%s
+</div>';
 
         $image = isset($this->images[$number])? $this->images[$number] : $this->images['default'];
 
@@ -294,7 +306,9 @@ class Text
             $image[0], $image[1], $this->urls[$nextChapter],
             $latinTitle['book'], $latinTitle['number'], $this->makeLatinCorrections($latinTitle['text']),
             $paragraphs,
-            $this->urls[$previousChapter], $this->urls[$nextChapter]);
+            $this->urls[$previousChapter], $this->urls[$nextChapter],
+            $this->makeTranslatedByFootnote($frenchTitle['translated']),
+            $this->makeLinkToLaFontaine($number));
     }
 
     /**
@@ -388,6 +402,24 @@ class Text
     }
 
     /**
+     * Creates link to the La Fontaine fable
+     *
+     * @param int $number
+     * @return string
+     */
+    public function makeLinkToLaFontaine($number)
+    {
+        if (! empty($this->laFontaine[$number])) {
+            list($title, $url) = $this->laFontaine[$number];
+            $link = sprintf('<div class="fp-la-fontaine">Lire la fable de La Fontaine : <a href="%s">%s</a></div>', $url, $title);
+        } else {
+            $link = null;
+        }
+
+        return $link;
+    }
+
+    /**
      * Makes a blog message/fable
      *
      * @param array $frenchChapter
@@ -468,6 +500,23 @@ class Text
         $paragraphs = implode("\n", $paragraphs);
 
         return $paragraphs;
+    }
+
+    /**
+     * Creates the translated by footnote
+     *
+     * @param string $translated
+     * @return string
+     */
+    public function makeTranslatedByFootnote($translated)
+    {
+        if (empty($translated)) {
+            $footnote = 'Traduit par M. E. Panckoucke, 1864';
+        } else {
+            $footnote = "Traduit par M. Corne, $translated";
+        }
+
+        return $footnote;
     }
 
     /**
