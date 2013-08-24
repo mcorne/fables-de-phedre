@@ -225,7 +225,7 @@ class Text
      * @return string
      */
     public function fixPunctuation($content) {
-        $content = preg_replace('~« ~', '«&nbsp;', $content);
+        $content = preg_replace('~(«|—) ~', '$1&nbsp;', $content);
         $content = preg_replace('~ (»|\?|!|:)~', '&nbsp;$1', $content);
 
         return $content;
